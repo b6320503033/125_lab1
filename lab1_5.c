@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int N,i,max;
+    int N,i,max,k=1;
     scanf("%d",&N);
 
     int a[N];
@@ -13,13 +13,23 @@ int main()
 
     for(i=1; i<=N; i++)
     {
-        if(a[i]>a[i+1])
+        if(max<a[i])
         {
             max=a[i];
-            break;
         }
-
+        else if(a[i]==a[i+1])
+        {
+            k++;
+        }
     }
+    for(i=1; i<=N; i++)
+    {
+        if(max==a[i])
+            break;
+    }
+
+    if(k==N)
+        i=1;
     printf("%d %d",i,max);
     return 0;
 }
