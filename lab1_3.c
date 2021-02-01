@@ -2,7 +2,7 @@
 int main()
 {
     long long int N;
-    scanf("%d",&N);
-    printf("%d %d",N%3,N%11);
+    scanf("%lld",&N);
+    printf("%lld %lld",N%3,N%11);
     return 0;
 }
