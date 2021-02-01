@@ -3,6 +3,7 @@ int main()
 {
     int n,i,max;
     scanf("%d",&n);
+
     int a[n];
 
     for(i=0; i<n; i++)
@@ -12,8 +13,9 @@ int main()
 
     for(i=0; i<n; i++)
     {
-        if(a[i]>max)
+        if(max<a[i])
             max=a[i];
     }
-
+    printf("%d",max);
+    return 0;
 }
